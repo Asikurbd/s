@@ -1,15 +1,20 @@
 <script type="text/javascript">
 //<![CDATA[
 // Extract the path segment from the URL (e.g., "img" from "abc.com/img")
-var path = window.location.pathname.split('/g').pop();
+var path = window.location.pathname.replace(/^\/|\/$/g, ''); // Remove leading and trailing slashes
 var urls = {
     'img': "https://www.arbd.top/p/image-upload.html"
 };
+
+// Debugging - check what value 'path' contains
+console.log('Path extracted:', path);
 
 if (path && urls[path]) {
     window.location.href = urls[path];
 } else if (path) {
     document.write("'" + path + "' not found :(");
+} else {
+    document.write("No path specified");
 }
 //]]>
 </script>
