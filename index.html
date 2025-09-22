@@ -1,1 +1,15 @@
-<h1>aaaaa</h1>
+<script type="text/javascript">
+//<![CDATA[
+// Extract the path segment from URL (e.g., "img" from "abc.com/img")
+var path = window.location.pathname.split('/').filter(Boolean).pop();
+var urls = {
+    'img': "https://www.arbd.top/p/image-upload.html"
+};
+
+if (path && urls[path]) {
+    window.location.href = urls[path];
+} else if (path) {
+    document.write("'" + path + "' not found :(");
+}
+//]]>
+</script>
