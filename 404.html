@@ -1,14 +1,17 @@
 <script type="text/javascript">
 //<![CDATA[
-// Get the path from the URL (removing the leading slash)
 var path = window.location.pathname.substring(1);
-
-// Define the URL mappings
 var urls = {
+
+
+    
     '1': "https://www.google.com",
     '2': "https://www.google.com",
     'gh': "https://github.com/asikurbd",
     'file': "https://sscraj.com/cv/files"
+
+
+    
 };
 
 // Check if a path was specified
@@ -18,12 +21,10 @@ if (path) {
         // Redirect to the mapped URL
         window.location.href = urls[path];
     } else {
-        // Show error message for unknown paths
         document.write("'" + path + "' not found :(");
     }
 } else {
-    // Show message when no path is specified
-    document.write("No redirect key specified. Available keys: '1', '2', 'gh', 'file'");
+    document.write("No redirect key specified.");
 }
 //]]>
 </script>
